@@ -1,10 +1,27 @@
-// The player will have to guess the answer, just like in Word Guess. This time, though, the player will guess with numbers instead of letters. 
+// VARIABLES
+var wins = 0;
+var losses = 0;
+var crystal1;
+var crystal2;
+var crystal3;
+var crystal4;
+var score = 0;
 
-// 3. Here's how the app works:
+// FUNCTIONS
 
-//    * There will be four crystals displayed as buttons on the page.
+// GAME START / RESET
 
-//    * The player will be shown a random number at the start of the game.
+// At the start of game:
+
+// A random number between 19 - 120 is displayed
+
+wins = 0;
+losses = 0;
+score = 0;
+
+// each crystal gets a random value between 1 - 12 
+
+// GAME PLAY
 
 //    * When the player clicks on a crystal, it will add a specific amount of points to the player's total score. 
 
@@ -19,10 +36,5 @@
 
 //      * When the game begins again, the player should see a new random number. Also, all the crystals will have four new hidden values. Of course, the user's score (and score counter) will reset to zero.
 
-//    * The app should show the number of games the player wins and loses. To that end, do not refresh the page as a means to restart the game.
+//    * The app should show the number of games the player wins and loses. 
 
-// ##### Option 1 Game design notes
-
-// * The random number shown at the start of the game should be between 19 - 120.
-
-// * Each crystal should have a random hidden value between 1 - 12.
