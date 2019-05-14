@@ -6,27 +6,43 @@ var crystal2;
 var crystal3;
 var crystal4;
 var score = 0;
+var min = 19; 
+var max = 121;
+var cMin = 1;
+var cMax = 13;
 
 // FUNCTIONS
+
 
 // GAME START / RESET
 
 // At the start of game:
 
 // A random number between 19 - 120 is displayed
+var randomNumber = Math.floor(Math.random() * (max - min +1)) + min; 
+console.log(randomNumber) 
 
 wins = 0;
 losses = 0;
 score = 0;
 
 // each crystal gets a random value between 1 - 12 
+// var crystalValues = function() {
+crystal1 = Math.floor(Math.random() * (cMax - cMin +1)) + cMin;
+crystal2 = Math.floor(Math.random() * (cMax - cMin +1)) + cMin;
+crystal3 = Math.floor(Math.random() * (cMax - cMin +1)) + cMin;
+crystal4 = Math.floor(Math.random() * (cMax - cMin +1)) + cMin;
+// }
+console.log(crystal1, crystal2, crystal3, crystal4)
 
 // GAME PLAY
 
-//    * When the player clicks on a crystal, it will add a specific amount of points to the player's total score. 
+// When a crystal is clicked, add number to the score counter.
 
-//      * Your game will hide this amount until the player clicks a crystal.
-//      * When they do click one, update the player's score counter.
+$("#crystal-image1").on("click", function() {
+    crystal1 + score
+});
+console.log(score)
 
 //    * The player wins if their total score matches the random number from the beginning of the game.
 
