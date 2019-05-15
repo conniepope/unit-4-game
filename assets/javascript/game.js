@@ -1,10 +1,12 @@
 // VARIABLES
 var wins = 0;
 var losses = 0;
+//these are the crystal values
 var crystal1;
 var crystal2;
 var crystal3;
 var crystal4;
+
 var score = 0;
 var min = 19; 
 var max = 121;
@@ -18,9 +20,11 @@ var cMax = 13;
 
 // At the start of game:
 
-// A random number between 19 - 120 is displayed
+// A random number between 19 - 120 is picked
 var randomNumber = Math.floor(Math.random() * (max - min +1)) + min; 
 console.log(randomNumber) 
+// the random number is diplayed
+$(".random-number").text(randomNumber)
 
 wins = 0;
 losses = 0;
@@ -37,12 +41,25 @@ console.log(crystal1, crystal2, crystal3, crystal4)
 
 // GAME PLAY
 
-// When a crystal is clicked, add number to the score counter.
+// When a crystal is clicked, add it's number to the score counter.
 
 $("#crystal-image1").on("click", function() {
-    crystal1 + score
+    return crystal1 + score
 });
-console.log(score)
+$("#crystal-image1").on("click", function(event) {
+    $("#score").html(event.result);
+});
+
+$("#crystal-image2").on("click", function() {
+    return crystal1 + score
+});
+$("#crystal-image2").on("click", function(event) {
+    $("#score").html(event.result);
+});
+//every time a crystal image is clicked, keep adding coresponding number to the score ---- loop?
+if (score < randomNumber) {
+    
+}
 
 //    * The player wins if their total score matches the random number from the beginning of the game.
 
