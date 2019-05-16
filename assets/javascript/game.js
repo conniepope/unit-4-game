@@ -1,24 +1,42 @@
+//GLOBAL
+
+var score = 0;
+//these are the crystal values
+var crystal1;
+var crystal2;
+var crystal3;
+var crystal4;
+
+var updateScore = function() {
+    $("#score").html("Your number: " + score);
+}
+
+//RESET
+
+var reset = function() {
+    score = 0;
+    crystal1 = 0;
+    crystal2 = 0;
+    crystal3 = 0;
+    crystal4 = 0;   
+    game();
+}
+
+//MAIN GAME
+
 var game = function () {
 
     // VARIABLES
     var wins = 0;
     var losses = 0;
-    //these are the crystal values
-    var crystal1;
-    var crystal2;
-    var crystal3;
-    var crystal4;
 
-    var score = 0;
+
     var min = 19; 
     var max = 121;
     var cMin = 1;
     var cMax = 13;
 
     // FUNCTIONS
-
-
-    // GAME START / RESET
 
     // At the start of game:
 
@@ -28,9 +46,6 @@ var game = function () {
     // the random number is diplayed
     $(".random-number").text("Your numbert to match: " + randomNumber)
 
-    wins = 0;
-    losses = 0;
-    score = 0;
 
     // each crystal gets a random value between 1 - 12 
     // var crystalValues = function() {
@@ -44,32 +59,33 @@ var game = function () {
     // GAME PLAY
 
     // When a crystal is clicked, add it's number to the score counter.
+    // ***** after reset, numbers are doubling!!!! why????  ---------------------------   things to try: $("#score").unbind().click(function(){   });; 
+    //      if using .unbind, does the .on need changed to .bind???
 
     $("#crystal-image1").on("click", function() {
         // score = score + crystal1;
         score += crystal1;   
-        $("#score").html(score);
+        $("#score").html("Your number: " + score);
+        console.log(crystal1)
+        console.log(score)
     });
 
     $("#crystal-image2").on("click", function() {
-        // score = score + crystal1;
         score += crystal2;   
-        $("#score").html(score);
+        $("#score").html("Your number: " + score);
     });
 
     $("#crystal-image3").on("click", function() {
-        // score = score + crystal1;
         score += crystal3;   
-        $("#score").html(score);
+        $("#score").html("Your number: " + score);
     });
 
     $("#crystal-image4").on("click", function() {
-        // score = score + crystal1;
         score += crystal4;   
-        $("#score").html(score);
+        $("#score").html("Your number: " + score);
     });
 
-    // after loss, everything works at first. except losses will continue to go up even though score goes back to 0 and already lost. does not reset. but random numbers keep changing (resetting)
+
     $(".crystal-container").on("click", function() {
         if (score > randomNumber) {
             //    * The player loses if their score goes above the random number.
@@ -79,7 +95,6 @@ var game = function () {
             console.log("loser");
             reset()
 
-    // after win, everything works at first. expcept the next button pushed is automatic loss. numbers all reset correctly.
         } else if (score === randomNumber) {
             //    * The player wins if their total score matches the random number from the beginning of the game.
             wins++;
@@ -91,17 +106,9 @@ var game = function () {
         //    * The game restarts whenever the player wins or loses.
     })
 }
-var reset = function() {
-    score = 0;
-    updateScore();
-    game()
-}
+
 game();
 
-var updateScore = function() {
-    $("#score").html("Your number: " + score);
-
-}
 
 
 
