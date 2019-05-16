@@ -20,13 +20,26 @@
         <p>The value of each crystal is hidden from you until it is clicked on.</p>
         <p>Each time the games starts, the value of each crystal will change.</p>
 
-        <div class="random-number">Your number to match:     
+        <div class="box">
+            <h2>Your number to match: </h2>  
+            <h1 class="random-number"></h1>  
+        </div>
+        
+        <div class="box">
+            <h2>Wins: </h2>  
+            <h1 id="wins"> </h1>
         </div>
 
-        <div class="wins-losses">
-            <p id="wins">Wins: </p>
-            <p id="losses">Losses: </p>
+        <div class="box">
+            <h2>Losses: </h2>  
+            <h1 id="losses"> </h1>
         </div>
+
+        <div class="box">
+            <h2>Your score is:</h2>
+            <h1 id="score"></h1>
+        </div>
+    
 
         <div class="crystal-container">
             <img id="crystal-image1" src="assets/images/crystal-image1.jpeg">
@@ -34,9 +47,7 @@
             <img id="crystal-image3" src="assets/images/crystal-image3.jpeg">
             <img id="crystal-image4" src="assets/images/crystal-image4.jpeg">
         </div>
-        <div class="score-container">
-            <p id="score">Your score is:</p>
-        </div>
+
 
         <script src="assets/javascript/game.js"></script>
 
