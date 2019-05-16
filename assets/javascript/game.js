@@ -44,21 +44,19 @@ console.log(crystal1, crystal2, crystal3, crystal4)
 // When a crystal is clicked, add it's number to the score counter.
 
 $("#crystal-image1").on("click", function() {
-    return crystal1 + score
-});
-$("#crystal-image1").on("click", function(event) {
-    $("#score").html(event.result);
+    // score = score + crystal1;
+    score += crystal1;   
+    $("#score").html(score);
 });
 
-$("#crystal-image2").on("click", function() {
-    return crystal1 + score
-});
-$("#crystal-image2").on("click", function(event) {
-    $("#score").html(event.result);
-});
-//every time a crystal image is clicked, keep adding coresponding number to the score ---- loop?
+
+
+//every time a crystal image is clicked, keep adding corresponding number to the score ---- loop?
 if (score < randomNumber) {
+
+
     
+
 }
 
 //    * The player wins if their total score matches the random number from the beginning of the game.
