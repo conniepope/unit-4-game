@@ -2,6 +2,7 @@ body {
     font-family: 'Acme', sans-serif;
     background: url(../images/background-image.png);
     color: white;  
+    padding: 30px;
 }
 
 .box {
@@ -11,10 +12,15 @@ body {
     height: 150px;
     text-align: center;
     float: left;
+    margin: 5px;
 }
 
 img {
     height: 200px;
     width: 200px;
     border: 5px double black;
+    clear: left;
 }
+
+
+

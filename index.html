@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compastible" content="IE=edge">
         <title>Crystal Collector Game</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
         <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -20,36 +21,38 @@
         <p>The value of each crystal is hidden from you until it is clicked on.</p>
         <p>Each time the games starts, the value of each crystal will change.</p>
 
-        <div class="box">
-            <h2>Your number to match: </h2>  
-            <h1 class="random-number"></h1>  
+        <div class="row">
+            <div class="box">
+                <h3>Your number to match: </h3>  
+                <h2 class="random-number"></h2>  
+            </div>
+            
+            <div class="box">
+                <h3>Wins: </h3>  
+                <h2 id="wins"> </h2>
+            </div>
+
+            <div class="box">
+                <h3>Losses: </h3>  
+                <h2 id="losses"> </h2>
+            </div>
+
+            <div class="box">
+                <h3>Your score is:</h3>
+                <h2 id="score"></h2>
+            </div>
         </div>
         
-        <div class="box">
-            <h2>Wins: </h2>  
-            <h1 id="wins"> </h1>
+        <div class="row">
+            <div class="crystal-container">
+                <img id="crystal-image1" src="assets/images/crystal-image1.jpeg">
+                <img id="crystal-image2" src="assets/images/crystal-image2.jpeg">
+                <img id="crystal-image3" src="assets/images/crystal-image3.jpeg">
+                <img id="crystal-image4" src="assets/images/crystal-image4.jpeg">
+            </div>
         </div>
 
-        <div class="box">
-            <h2>Losses: </h2>  
-            <h1 id="losses"> </h1>
-        </div>
-
-        <div class="box">
-            <h2>Your score is:</h2>
-            <h1 id="score"></h1>
-        </div>
-    
-
-        <div class="crystal-container">
-            <img id="crystal-image1" src="assets/images/crystal-image1.jpeg">
-            <img id="crystal-image2" src="assets/images/crystal-image2.jpeg">
-            <img id="crystal-image3" src="assets/images/crystal-image3.jpeg">
-            <img id="crystal-image4" src="assets/images/crystal-image4.jpeg">
-        </div>
-
-
-        <script src="assets/javascript/game.js"></script>
+    <script src="assets/javascript/game.js"></script>
 
     </body>
 </html>
