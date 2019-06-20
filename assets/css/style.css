@@ -1,7 +1,8 @@
 body {
     font-family: 'Acme', sans-serif;
     background: url(../images/background-image.png);
-    color: white;  
+    color: white; 
+    text-shadow: 2px 2px black; 
     padding: 50px;
 }
 
@@ -27,6 +28,7 @@ img {
     background-image: linear-gradient(to bottom, rgb(34, 233, 200), white);
     border: 5px inset white;
     color: black;
+    text-shadow: none;
     padding: 10px 20px 5px 20px;
     width: 770px;
     margin: 20px 0;
@@ -34,4 +36,40 @@ img {
 
 
 
+@media (max-width: 960px) {
+    .instructions {
+        width: 100%;
+        margin: 0;
+    }
 
+    .row {
+        align-content: center;
+        flex-wrap: nowrap;
+    }
+
+    .box {
+        float: none;
+        height: 175px;
+        font-size: 1em;
+    }
+
+}
+
+@media (max-width: 640px) {
+    .instructions {
+        width: 100%;
+        margin: 0;
+    }
+
+    .row {
+        align-content: center;
+        flex-wrap: nowrap;
+    }
+
+    .box {
+        float: none;
+        height: 200px;
+        font-size: 1em;
+    }
+
+}
