@@ -1,6 +1,4 @@
-# unit-4-game
-
-This is the Crystals Collector Game.
+# Crystals Collector Game
 
 You will be given a random number at the start of the game.
 There are four crystals. By clicking on a crystal, you will add a specific number of points to your total score.
